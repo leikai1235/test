@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/banner.css">
+    <style>
+
+        /*插件开发人员 编写的css*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .container {
+
+            margin-top: 50px;
+
+            width: 1120px;
+            height: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+
+        .banner-wrapper {
+            width: 1120px;
+            height: 600px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner-item {
+            width: 1120px;
+            height: 600px;
+            position: absolute;
+            text-align: center;
+            box-sizing: border-box;
+            background-repeat: no-repeat;
+            background-size: 100% 100% !important;
+
+        }
+
+        .banner-item.active {
+            z-index: 2;
+        }
+
+        .pagination {
+            width: 80%;
+            height: 20px;
+            position: absolute;
+            z-index: 999;
+            top: 90%;
+            left: 10%;
+            text-align: center;
+        }
+
+        .pagination span {
+            display: inline-block;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: #999999;
+            margin-left: 40px;
+        }
+
+        .pagination span.active {
+            background: red;
+        }
+
+        .pagination span:first-child {
+            margin-left: 0;
+        }
+
+        .container:hover .prev {
+            display: block;
+        }
+
+        .container:hover .next {
+            display: block;
+        }
+
+        .prev, .next {
+            display: none;
+            height: 60px;
+            width: 40px;
+            background: red;
+            opacity: .3;
+            position: absolute;
+            z-index: 999;
+        }
+
+        .prev {
+            left: 0;
+            top: 50%;
+            margin-top: -30px;
+        }
+
+        .next {
+            right: 0;
+            top: 50%;
+            margin-top: -30px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="banner-wrapper">
+        <div class="banner-item active" style="background: url('images/001.jpg')"></div>
+        <div class="banner-item" style="background: url('images/002.jpg')"></div>
+        <div class="banner-item" style="background: url('images/003.jpg')"></div>
+        <div class="banner-item" style="background: url('images/004.jpg')"></div>
+        <div class="banner-item" style="background: url('images/005.jpg')"></div>
+        <div class="banner-item" style="background: url('images/006.png')"></div>
+    </div>
+
+    <div class="pagination"></div>
+
+    <div class="prev"></div>
+    <div class="next"></div>
+
+</div>
+<script src="../lib/jquery.js"></script>
+<script src="banner.js"></script>
+<script>
+    //轮播图插件;
+    $(function () {
+        $(".container")
+            .Banner(".banner-wrapper", {
+                pagination: ".pagination",
+                nextBtn: '.next',
+                prevBtn: '.prev',
+                animate: "fade",
+                autoplay: true
+            })
+    })
+</script>
+</body>
+</html>

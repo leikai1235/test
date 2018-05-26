@@ -1,0 +1,79 @@
+.container {
+    width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item-box {
+
+    position: relative;
+    width: 224px;
+    height: 440px;
+    overflow: hidden;
+    margin: 20px 20px;
+
+}
+
+.picBox {
+    width: 224px;
+    height: 340px;
+    overflow: hidden;
+    display: block;
+    position: relative;
+}
+
+.part {
+    margin-top: 5px;
+    height: 30px;
+    line-height: 30px;
+}
+
+.price {
+    display: inline-block;
+    font-size: 16px;
+    color: #f36;
+    margin-right: 2px;
+}
+
+.collect {
+    float: right;
+    line-height: 14px;
+    font-size: 14px;
+    margin-top: 6px;
+    margin-left: 3px;
+    color: #999;
+}
+
+.icon-star {
+    margin-right: 3px;
+}
+
+.icon-star {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background: url(http://s2.mogucdn.com/mlcdn/c45406/170328_88giad0l4lcl61kg8ak02567ddhfd_32x30.png) center no-repeat;
+    background-size: 100%;
+}
+
+
+.title {
+    display: block;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.icon-select {
+    display: inline-block;
+    width: 38px;
+    height: 20px;
+    margin-right: 4px;
+    background: url(http://s2.mogucdn.com/p2/170314/133753108_5996kakhb5c3kl74gjg24c2h24l48_90x42.png) no-repeat center;
+    background-size: contain;
+    vertical-align: sub;
+}
